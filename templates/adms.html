@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administradores</title>
+    <link rel="stylesheet" href="../static/adms.css">
+</head>
+<body>
+    <p> ADMINISTRADORES</p>
+    <lo type="a">
+        {% for key, adm in adms.items() %}
+        <li>Nome: {{ adm.nome }} Email: {{ adm.email }}</li>
+        
+        {% endfor %}        
+    </lo>
+    
+</body>
+</html>

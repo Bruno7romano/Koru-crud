@@ -9,6 +9,21 @@ db = ["fork@teste.com","korao@example.com", "koruzim@example.com", "koruzito@gma
 
 usuarios = {}
 
+adms = {
+    1: {
+        "nome" : "Rafael Muniz",
+        "email" : "rafaelmuniz@gmail.com"
+    },
+    2: {
+        "nome" : "Cléber Santos",
+        "email" : "clebersantos@gmail.com"
+    },
+    3: {
+        "nome" : "Leonardo Taian",
+        "email" : "leonardotaian@gmail.com"
+    }
+}
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -54,6 +69,11 @@ def cadastro():
     }
     return render_template('cadastro.html')
 
+@app.route("/admns")
+def administradores():
+    return render_template('adms.html', adms = adms)
+
+
 
 
 
@@ -61,4 +81,4 @@ def cadastro():
 if __name__ == '__main__':
     app.run(debug=True)
 
-# teste commit léo
+# alt to push
